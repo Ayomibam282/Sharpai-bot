@@ -13,7 +13,9 @@ def ask_groq(prompt):
         result = r.json()
         if "choices" not in result:
             return f"Groq error Boss: {result}"
-        return result['choices'][0]['message']['content']                  except Exception as e:
+        return result['choices'][0]['message']
+        ['content']                 
+    except Exception as e:
         return f"Wahala be: {e}"
 
 def send(chat_id, text):                                                   requests.post(f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage", json={"chat_id": chat_id, "text": text[:4000]})
