@@ -1,6 +1,7 @@
 import os
 import requests, time, datetime, ast, operator                         
-TELEGRAM_TOKEN = "8895486701:AAFRVLnQ05Ou7xL7MZ0HhlafAUZdczlidmk"      GROQ_KEY = os.getenv("GROQ_API_KEY")
+TELEGRAM_TOKEN = "8895486701:AAFRVLnQ05Ou7xL7MZ0HhlafAUZdczlidmk"     
+GROQ_KEY = os.getenv("GROQ_API_KEY")
                                                                        SYSTEM = "You are SharpAI, a sharp Nigerian business assistant from Lagos. Speak in clear Nigerian Pidgin mixed with simple English. Always call user 'Boss'. Keep replies short, direct, practical."
 
 def ask_groq(prompt):
